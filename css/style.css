@@ -1,0 +1,188 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+h1 {
+    font-family:monospace;
+    font-size: 48pt;
+}
+header {
+    background-color:#3C6543;
+    height: 109px;
+    background-image: url("../images/yellow-splotch-yet-again.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    color: white;
+}
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+.logo{
+    display: inline-block;
+    width: 10%;
+    padding: 10px 0 20px 2%;
+}
+.logo img {
+    width: 97px;
+    height: 52px;
+}
+.titleBlock {
+    width: 32%;
+}
+.title {
+    color: black;
+    width: 100%;
+    padding: 0 10%;
+}
+nav {
+    display: inline-block;
+    width: 48%;
+    padding: 0;
+    margin:0;
+    text-align:right;
+}
+.headerNav {
+    width: 50%;
+    margin-left: auto;
+    padding: 2% 0 1% 0;
+}
+.headerNav li {
+    display: inline-block;
+    padding: 2% 4%;
+    text-align: center;
+}
+section {
+    border: 2px solid cyan;
+}
+div {
+    border: 2px solid red;
+}
+.grid {
+    display: grid;
+}
+#sect1 {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 50% 20%;
+    grid-template-areas: 
+        "topLeft rightContent"
+        "midLeft rightContent"
+        "bottomLeft rightContent";
+    width: 100%;
+    background-color: black;
+}
+.topLeft {
+    grid-area: topLeft;
+    background-image: url("../images/green-splotch.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.midLeft {
+    grid-area: midLeft;
+}
+.bottomLeft {
+    grid-area: bottomLeft;
+}
+.rightContent {
+    grid-area: rightContent;
+    background-image: url("../images/magenta-splotch-solo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.portrait {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 5% 0 5%;
+}
+#hi {
+    font-size: 48pt;
+    font-style: oblique;
+    color: #DDD819;
+    padding: 1% 50% 1% 5%;
+}
+#bioBox {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10% 5% 5% 5%;
+}
+#bio {
+    font-size: 32pt;
+    color: white;
+}
+#buttonBox {
+    justify-content: center;
+    margin: 0 auto;
+}
+.button {
+    padding: 1% 2%;
+    font-size: 16pt;
+    border-radius: 4px;
+    box-shadow: 5px 10px #888888;
+}
+#sect2 {
+    background-color: white;
+    color: black;
+}
+#skillDivs {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "leftColumn midColumn rightColumn";
+}
+.leftColumn {
+    grid-area: leftColumn;
+}
+.midColumn {
+    grid-area: midColumn;
+}
+.rightColumn {
+    grid-area: rightColumn;
+}
+#sect3 {
+    background-color: black;
+    color: white;
+}
+#workDivs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "candorImg candorDescription"
+        "epaImg epaDescription"
+        "cdcImg cdcDescription";
+}
+.candorImg {
+    grid-area: candorImg;
+}
+.candorDescription {
+    grid-area: candorDescription;
+}
+.epaImg {
+    grid-area: epaImg;
+}
+.epaDescription {
+    grid-area: epaDescription;
+}
+.cdcImg {
+    grid-area: cdcImg;
+}
+.cdcDescription {
+    grid-area: cdcDescription;
+}
+footer {
+    background-color: #373738;
+}
+footer ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 75%;
+    padding: 1% 2%;
+    margin-left: auto;
+}
+footer li {
+    padding: 0 7%;
+    color: white;
+}
