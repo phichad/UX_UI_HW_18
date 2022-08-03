@@ -1,84 +1,172 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 body {
     min-height: 100vh;
-    width: 100%;
-    margin: 0;
+}
+/* Text styles */
+h1, h2, h3, button {
+    font-family:'Courier New', Courier, monospace;
+}
+h4, h5, p, li {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 h1 {
-    font-family:monospace;
     font-size: 48pt;
 }
+h2 {
+    font-size: 24pt;
+}
+h3 {
+    font-size: 18pt;
+}
+h4 {
+    font-size: 16pt;
+}
+h5 {
+    font-size: 14pt;
+}
+p {
+    font-size: 16pt;
+}
+ul {
+    text-align: center;
+}
+li {
+    font-size: 16pt;
+}
+button {
+    font-size: 14pt;
+    border-radius: 4px;
+}
+
+/* Header CSS inline box*/
 header {
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+.headerBG {
     background-color:#3C6543;
-    height: 109px;
-    background-image: url("../images/yellow-splotch-yet-again.png");
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position:left;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.yellowSplotch {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+.headerContent {
     color: white;
+    background-color: transparent;
+    height: 100px;
+    width: auto;
+    position: relative;
+    z-index: 4;
 }
 .inline-block {
     display: inline-block;
     vertical-align: top;
 }
-.logo{
-    display: inline-block;
+.logoBlock {
     width: 10%;
-    padding: 10px 0 20px 2%;
+    height: 100%;
+    margin: 0 auto;
 }
-.logo img {
+.logo {
     width: 97px;
     height: 52px;
+    padding: 15px 0 20px 2%;
 }
 .titleBlock {
-    width: 32%;
+    width: 24%;
+    height: 100%;
+    margin: 0 auto;
 }
 .title {
     color: black;
-    width: 100%;
-    padding: 0 10%;
+    width: 85%;
+}
+.name {
+    margin: 0 auto;
+    padding: 15px 0 0 5%;
+}
+.job {
+    margin: 0 auto;
+    padding: 0 0 15px 5%;
 }
 nav {
     display: inline-block;
-    width: 48%;
-    padding: 0;
-    margin:0;
+    width: 63%;
+    height: 100%;
+    margin:0 auto;
     text-align:right;
 }
 .headerNav {
-    width: 50%;
+    width: 75%;
     margin-left: auto;
-    padding: 2% 0 1% 0;
 }
 .headerNav li {
     display: inline-block;
     padding: 2% 4%;
     text-align: center;
 }
-section {
-    border: 2px solid cyan;
-}
-div {
-    border: 2px solid red;
-}
+
+/* Hero CSS grid */
 .grid {
     display: grid;
 }
-#sect1 {
+.heroSpace {
+    background-color: black;
+    width: 100%;
+    position: relative;
+    top: 100px;
+    left: 0px;
+    z-index: 1;
+}
+.heroContent {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 50% 20%;
+    grid-template-rows: 30% 45% 20%;
     grid-template-areas: 
         "topLeft rightContent"
         "midLeft rightContent"
         "bottomLeft rightContent";
     width: 100%;
+}
+.heroBG {
     background-color: black;
+    width: 100%;
+}
+.greenSplotch {
+    position: absolute;
+    height: 40%;
+    width: 60%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.magentaSplotch {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
 }
 .topLeft {
     grid-area: topLeft;
-    background-image: url("../images/green-splotch.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
 }
 .midLeft {
     grid-area: midLeft;
@@ -88,101 +176,305 @@ div {
 }
 .rightContent {
     grid-area: rightContent;
-    background-image: url("../images/magenta-splotch-solo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
 }
 .portrait {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding: 5% 5% 0 5%;
+    padding: 5% 0 0 0;
 }
 #hi {
-    font-size: 48pt;
-    font-style: oblique;
+    width: 90%;
     color: #DDD819;
-    padding: 1% 50% 1% 5%;
+    padding: 5% 1%;
 }
 #bioBox {
-    justify-content: center;
     margin: 0 auto;
-    padding: 10% 5% 5% 5%;
+    padding: 15% 5% 10% 5%;
 }
 #bio {
-    font-size: 32pt;
+    margin: 0 auto;
+    font-size: 24pt;
+    line-height: 2;
     color: white;
 }
 #buttonBox {
-    justify-content: center;
-    margin: 0 auto;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
-.button {
-    padding: 1% 2%;
+.resumeButton {
     font-size: 16pt;
-    border-radius: 4px;
-    box-shadow: 5px 10px #888888;
+    display: block;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 1% 2%;
+    box-shadow: 5px 10px #CD5500;
+    border: 2px solid #DDD819;
+    transition: all 0.5s ease;
 }
-#sect2 {
+.resumeButton:hover {
+    background-color: #DDD819;
+    color:black;
+    font-weight: 500;
+    padding: 2% 4%;
+    box-shadow: 2.5px 5px #CD5500;
+    border: none;
+}
+
+/* My UX Skills CSS grid */
+.sectionHeader {
+    text-indent: 5%;
+    border: 2px solid red;
+}
+.mySkills {
     background-color: white;
     color: black;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 }
-#skillDivs {
+.skillDivs {
+    text-align: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
         "leftColumn midColumn rightColumn";
 }
 .leftColumn {
     grid-area: leftColumn;
+    border: 1px solid black;
 }
 .midColumn {
     grid-area: midColumn;
+    border: 1px solid black;
 }
 .rightColumn {
     grid-area: rightColumn;
+    border: 1px solid black;
 }
-#sect3 {
+.nestedGrid {
+    display: grid;
+    justify-content: center;
+    align-content: space-around;
+    margin: auto;
+    padding: 5% 0 0 0;
+}
+
+/* My Work CSS flex */
+.myWork {
     background-color: black;
     color: white;
+    width: 100%;
 }
-#workDivs {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        "candorImg candorDescription"
-        "epaImg epaDescription"
-        "cdcImg cdcDescription";
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.candorImg {
-    grid-area: candorImg;
+.caseStudy {
+    width: 33%;
+    height: 100%;
+    text-align: center;
 }
-.candorDescription {
-    grid-area: candorDescription;
+.projectTitle h2 {
+    margin: 0 auto;
+    padding: auto 0 0 auto;
+}
+.projectTitle h3 {
+    margin: 0 auto;
+    padding: 0 0 auto auto;
+    font-weight: 500;
+}
+.candorImg1 {
+    width: 48%;
+    height: auto;
+    margin: 0 auto;
+}
+.candorImg2 {
+    width: 48%;
+    height: auto;
+    margin: 0 auto;
 }
 .epaImg {
-    grid-area: epaImg;
-}
-.epaDescription {
-    grid-area: epaDescription;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
 }
 .cdcImg {
-    grid-area: cdcImg;
+    width: 99%;
+    height: auto;
+    margin: 0 auto;
 }
-.cdcDescription {
-    grid-area: cdcDescription;
+
+.workButton {
+    margin: 10% auto;
+    padding: 1% 2%;
+    justify-content: end;
 }
+
+/* Footer CSS */
 footer {
     background-color: #373738;
+    width: 100%;
 }
 footer ul {
     display: inline-block;
     vertical-align: top;
-    width: 75%;
-    padding: 1% 2%;
-    margin-left: auto;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    padding: 5% 2% 0 2%;
 }
 footer li {
-    padding: 0 7%;
     color: white;
+    text-align: center;
+    padding: 0 7%;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600){
+    h1 {
+        font-size: 24pt;
+    }
+    h2 {
+        font-size: 20pt;
+    }
+    h3 {
+        font-size: 18pt;
+    }
+    h4 {
+        font-size: 14pt;
+    }
+    h5 {
+        font-size: 14pt;
+    }
+    p {
+        font-size: 14pt;
+    }
+    ul {
+        text-align: center;
+    }
+    li {
+        font-size: 14pt;
+    }
+    button {
+        font-size: 14pt;
+        border-radius: 4px;
+    }
+    header {
+        width: 100%;
+        height:auto;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        z-index: 4;
+    }
+    .headerBG {
+        background-color:#3C6543;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 2;
+    }
+    .yellowSplotch {
+        position: absolute;
+        height:auto;
+        width: 30%;
+        left: 0px;
+        top: 0px;
+        z-index: 3;
+    }
+    .headerContent {
+        color: white;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        position: relative;
+        z-index: 4;
+    }
+    .inline-block {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .logoBlock {
+        width: 10%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .logo {
+        width: 97px;
+        height: 52px;
+        padding: 2%;
+    }
+    .titleBlock {
+        width: 24%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .title {
+        color: black;
+        width: 85%;
+    }
+    .name {
+        margin: 0 auto;
+        padding: 2% 0 0 5%;
+    }
+    .job {
+        margin: 0 auto;
+        padding: 0 0 2% 5%;
+    }
+    nav {
+        display: inline-block;
+        width: 63%;
+        height: 100%;
+        margin:0 auto;
+        text-align:right;
+    }
+    .headerNav {
+        width: 75%;
+        margin-left: auto;
+    }
+    .headerNav li {
+        display: inline-block;
+        padding: 2% 4%;
+        text-align: center;
+    }
+    .heroContent {
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 40% 40% 10%;
+        grid-template-areas: 
+            "topLeft"
+            "rightContent"
+            "midLeft"
+            "bottomLeft";
+    }
+    .skillDivs {
+        text-align: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "topRow"
+            "midRow"
+            "bottomRow";
+    }
+    .topRow {
+        grid-area: topRow;
+    }
+    .midRow {
+        grid-area: midRow;
+    }
+    .bottomRow {
+        grid-area: bottomRow;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .caseStudy {
+        width: 100%;
+        text-align: center;
+    }
 }

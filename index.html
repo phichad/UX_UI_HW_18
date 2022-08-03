@@ -1,97 +1,159 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Phi-Portfolio-Grid</title>
+        <title>Phi-Portfolio-V2</title>
+        <meta name="author" content="Philix Chadbourn">
+        <meta name="description" content="UX UI Design Portfolio">
+        <meta name="keywords" content="HTML, CSS">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/96ac554012.js" crossorigin="anonymous"></script>
     </head>
     <body>
+
+<!-- My Header section coded using inline block -->
         <header class="navigation">
-            <div class="inline-block logo">
-                <img src="images/Phi-Logo-large.png">
+            <div class="headerBG"></div>
+            <img src="images/yellow-splotch-header.png" class="yellowSplotch">
+            <div class="headerContent">
+                <div class="inline-block logoBlock">
+                    <img src="images/Phi-Logo-large.png" class="logo">
+                </div>
+                <div class="inline-block titleBlock">
+                    <h4 class="title name">Philix Chadbourn</h4>
+                    <h5 class="title job">UX/UI Designer</h5>
+                </div>
+                <nav class="inline-block">
+                    <ul class="headerNav">
+                        <li class="inline-block">About</li>
+                        <li class="inline-block">Skills</li>
+                        <li class="inline-block">Projects</li>
+                        <li class="inline-block">Contact</li>
+                    </ul>
+                </nav>
             </div>
-            <div class="inline-block titleBlock">
-                <h3 class="title">Philix Chadbourn</h3>
-                <h4 class="title">UX/UI Designer</h4>
-            </div>
-            <nav class="inline-block">
-                <ul class="headerNav">
-                    <li class="inline-block">About</li>
-                    <li class="inline-block">Skills</li>
-                    <li class="inline-block">Projects</li>
-                    <li class="inline-block">Contact</li>
-                </ul>
-            </nav>
         </header>
-        <section class="grid" id="sect1">
-            <div class="topLeft">
-                <h1 id="hi">Hi, I'm Philix!</h1>
-            </div>
-            <div class=midLeft id="bioBox">
-                <p id="bio">I'm a UX/UI Designer with a passion for visual arts. I specialize in wireframing, styling, and iterating clickable prototypes of websites and apps.
-                </p>
-            </div>
-            <div class="bottomLeft" id="buttonBox">
-                <button class="button">Download Resume</button>
-            </div>
-            <div class="rightContent" id="heroImg">
-                <img src="images/self-portrait-crop.png" class="portrait">
-            </div>
-        </section>
-        <section class="grid" id="sect2">
-                <h1>My UX Skills</h1>
-            <div class="grid" id="skillDivs">
-                <div class="userResearch leftColumn">
-                    <img src="images/Profile-Pic-Ellipse.png" class="photo">
-                    <h2>User Research</h2>
-                    <p>description</p>
+
+<!-- My Hero section coded using CSS grid -->
+        <section class="heroSpace">
+            <div class="heroBG"></div>
+            <img src="images/green-splotch.png" class="greenSplotch">
+            <img src="images/magenta-splotch-layered.png" class="magentaSplotch">
+            <div class="grid heroContent">
+                <div class="topLeft">
+                    <h1 id="hi">Hi, I'm  Philix!</h1>
                 </div>
-                <div class="userInterface midColumn">
-                    <img src="images/Profile-Pic-Ellipse.png" class="photo">
-                    <h2>User Interface Design</h2>
-                    <p>description</p>
+                <div class=midLeft id="bioBox">
+                    <p id="bio">I'm a UX/UI Designer with a passion for visual arts. I specialize in wireframing, styling, and iterating clickable prototypes of websites and apps.
+                    </p>
                 </div>
-                <div class="webDev rightColumn">
-                    <img src="images/Profile-Pic-Ellipse.png" class="photo">
-                    <h2>Web Development</h2>
-                    <p>description</p>
+                <div class="bottomLeft" id="buttonBox">
+                    <button class="resumeButton">Download Resume</button>
+                </div>
+                <div class="rightContent" id="heroImg">
+                    <img src="images/self-portrait-crop.png" alt="Self-portrait drawing" class="portrait">
                 </div>
             </div>
         </section>
-        <section class="grid" id="sect3">
-            <h1>My Work</h1>
-            <div class="grid" id="workDivs">
-                <div class="caseStudy" id="candor">
-                    <div class="candorImg">
-                        <div>img placeholder</div>
+
+<!-- My UX Skills section coded using CSS grid -->
+        <section class="mySkills">
+                <h1 class="sectionHeader">My UX Skills</h1>
+            <div class="grid skillDivs">
+                <div class="userResearch leftColumn topRow">
+                    <div class="nestedGrid">
+                        <img src="images/Placeholder-Ellipse.png" class="photo">
                     </div>
-                    <div class="candorDescription">
-                        <h4>Candor App Design</h4>
-                        <p>More effective conversations. Increase confidence, decrease stress.</p>
-                        <button>view case study</button>
+                    <div class="nestedGrid">
+                        <h2>User Research</h2>
                     </div>
-                </div>
-                <div class="caseStudy" id="epa">
-                    <div class="epaImg">
-                        <img src="images/epa-desktop.png">
-                    </div>
-                    <div class="epaDescription">
-                        <h4>EPA Website Redesign</h4>
-                        <p>Improving site navigation and usability for educators and students.</p>
-                        <button>view case study</button>
+                    <div class="nestedGrid">
+                        <p>I enjoy working with a team to brainstorm ideas, gather insight from user interviews, and flesh out empathy-driven solutions through problem analysis, persona building, storyboarding, and usability testing of our preliminary wireframes prototypes.</p>
                     </div>
                 </div>
-                <div class="caseStudy" id="canines">
-                    <div class="cdcImg">
-                        <img src="images/can-do-canines-desktop.png">
+                <div class="userInterface midColumn midRow">
+                    <div class="nestedGrid">
+                        <img src="images/Placeholder-Ellipse.png" class="photo">
                     </div>
-                    <div class="cdcDescription">
-                        <h4>Can Do Canines Website Redesign</h4>
-                        <p>Creating a more visual layout to improve service dog adoption experience.</p>
-                        <button>view case study</button>
+                    <div class="nestedGrid">
+                        <h2>User Interface Design</h2>
+                    </div>
+                    <div class="nestedGrid">
+                        <p>I am a creator at heart, and am always eager to branch out to new forms of creative media. Combining the aesthetics of color theory and a well-balanced layout with the organization of mapping out navigation systems and the puzzle-like process of stringing together interactive prototypes is quite delightful. Transforming a thouroughly researched ideation into something tangible is like creating a new life from a collective consiousness.</p>
+                    </div>
+                </div>
+                <div class="webDev rightColumn bottomRow">
+                    <div class="nestedGrid">
+                        <img src="images/Placeholder-Ellipse.png" class="photo">
+                    </div>
+                    <div class="nestedGrid">
+                        <h2>Web Development</h2>
+                    </div>
+                    <div class="nestedGrid">
+                        <p>description</p>
                     </div>
                 </div>
             </div>
         </section>
+
+<!-- My Work section coded using CSS flex -->
+        <section class="myWork">
+            <h1 class="sectionHeader">My Work</h1>
+            <div class="flexContainer workDivs">
+                <div class="caseStudy">
+                    <div class="candorImgDiv">
+                        <img src="images/candor-d.png" class="candorImg1">
+                        <img src="images/candor-d-tips.png" class="candorImg2">
+                    </div>
+                    <div class="projectTitle candorTitle">
+                        <h2>Candor</h2>
+                        <h3>App Design</h3>
+                    </div>
+                    <div class="projectDescription candorDescription">
+                        <p>Shaping a therapy-inspired, research-based app to help busy professionals gain confidence in their ability to communicate effectively in stressful situations.</p>
+                    </div>
+                    <div class="workButtonDiv">
+                        <button class="workButton">View Case Study</button>
+                    </div>
+                </div>
+                <div class="caseStudy">
+                    <div class="epaImgDiv">
+                        <img src="images/epa-desktop.png" class="epaImg">
+                    </div>
+                    <div class="projectTitle epaTitle">
+                        <h2>E.P.A.</h2>
+                        <h3>Website Redesign</h3>
+                    </div>
+                    <div class="projectDescription epaDescription">
+                        <p>Reimagining site navigation and layout to improve usability for educators and students and inspire future generations to take part in protecting the planet.</p>
+                    </div>
+                    <div class="workButtonDiv">
+                        <button class="workButton">View Case Study</button>
+                    </div>
+                </div>
+                <div class="caseStudy">
+                    <div class="cdcImgDiv">
+                        <img src="images/can-do-canines-desktop.png" class="cdcImg">
+                    </div>
+                    <div class="projectTitle cdcTitle">
+                        <h2>Can Do Canines</h2>
+                        <h3>Website Redesign</h3>
+                    </div>
+                    <div class="projectDescription cdcDescription">
+                        <p>Crafting a fresh interface for a non-profit organization to add a boost of visual delight to their service dog adoption experience.</p>
+                    </div>
+                    <div class="workButtonDiv">
+                        <button class="workButton">View Case Study</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- My Footer section coded using inline block -->
         <footer>
             <ul>
                 <li class="inline-block">About</li>
