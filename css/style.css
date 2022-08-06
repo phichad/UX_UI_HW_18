@@ -8,7 +8,9 @@ html,body {
 body {
     min-height: 100vh;
 }
-/* Text styles */
+
+/* --------------- Text styles --------------- */
+
 h1, h2, h3, button {
     font-family:'Courier New', Courier, monospace;
 }
@@ -44,7 +46,8 @@ button {
     border-radius: 4px;
 }
 
-/* Header CSS inline box*/
+/* --------------- Header CSS inline box --------------- */
+
 header {
     height: 100px;
     width: 100%;
@@ -124,7 +127,8 @@ nav {
     text-align: center;
 }
 
-/* Hero CSS grid */
+/* --------------- Hero CSS grid --------------- */
+
 .grid {
     display: grid;
 }
@@ -177,7 +181,7 @@ nav {
 .rightContent {
     grid-area: rightContent;
 }
-.portrait {
+.selfPortrait {
     width: 100%;
     margin: 0 auto;
     padding: 5% 0 0 0;
@@ -188,19 +192,19 @@ nav {
     padding: 5% 1%;
 }
 #bioBox {
-    margin: 0 auto;
+    margin: auto;
     padding: 15% 5% 10% 5%;
 }
 #bio {
-    margin: 0 auto;
+    margin: auto;
     font-size: 24pt;
     line-height: 2;
     color: white;
 }
 #buttonBox {
     margin: auto;
+    padding: 100px, 0;
     width: 100%;
-    height: 100%;
 }
 .resumeButton {
     font-size: 16pt;
@@ -223,10 +227,10 @@ nav {
     border: none;
 }
 
-/* My UX Skills CSS grid */
+/* --------------- My UX Skills CSS grid --------------- */
+
 .sectionHeader {
     text-indent: 5%;
-    border: 2px solid red;
 }
 .mySkills {
     background-color: white;
@@ -262,8 +266,14 @@ nav {
     margin: auto;
     padding: 5% 0 0 0;
 }
+.nestedGrid p {
+    justify-content: space-around;
+    padding: 10%;
+    text-align: justify;
+}
 
-/* My Work CSS flex */
+/* --------------- My Work CSS flex --------------- */
+
 .myWork {
     background-color: black;
     color: white;
@@ -308,14 +318,18 @@ nav {
     height: auto;
     margin: 0 auto;
 }
-
+.projectDescription {
+    text-align: justify;
+    padding: 0 10%;
+}
 .workButton {
     margin: 10% auto;
     padding: 1% 2%;
     justify-content: end;
 }
 
-/* Footer CSS */
+/* --------------- Footer CSS --------------- */
+
 footer {
     background-color: #373738;
     width: 100%;
@@ -334,13 +348,14 @@ footer li {
     padding: 0 7%;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 600){
+/* --------------- Media Queries --------------- */
+
+@media only screen and (max-width: 650px){
     h1 {
-        font-size: 24pt;
+        font-size: 32pt;
     }
     h2 {
-        font-size: 20pt;
+        font-size: 24pt;
     }
     h3 {
         font-size: 18pt;
@@ -349,7 +364,7 @@ footer li {
         font-size: 14pt;
     }
     h5 {
-        font-size: 14pt;
+        font-size: 12pt;
     }
     p {
         font-size: 14pt;
@@ -365,91 +380,46 @@ footer li {
         border-radius: 4px;
     }
     header {
-        width: 100%;
         height:auto;
-        background-color: transparent;
-        position: fixed;
-        top: 0;
-        z-index: 4;
     }
     .headerBG {
-        background-color:#3C6543;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        z-index: 2;
+        height: 100%;
     }
     .yellowSplotch {
-        position: absolute;
-        height:auto;
-        width: 30%;
-        left: 0px;
-        top: 0px;
-        z-index: 3;
+        height:100%;
     }
     .headerContent {
-        color: white;
-        background-color: transparent;
         height: auto;
-        width: auto;
-        position: relative;
-        z-index: 4;
-    }
-    .inline-block {
-        display: inline-block;
-        vertical-align: top;
-    }
-    .logoBlock {
-        width: 10%;
-        height: auto;
-        margin: 0 auto;
     }
     .logo {
         width: 97px;
         height: 52px;
-        padding: 2%;
-    }
-    .titleBlock {
-        width: 24%;
-        height: 100%;
-        margin: 0 auto;
-    }
-    .title {
-        color: black;
-        width: 85%;
+        padding: auto;
     }
     .name {
-        margin: 0 auto;
-        padding: 2% 0 0 5%;
+        padding: 2% 0 0 50%;
     }
     .job {
-        margin: 0 auto;
-        padding: 0 0 2% 5%;
-    }
-    nav {
-        display: inline-block;
-        width: 63%;
-        height: 100%;
-        margin:0 auto;
-        text-align:right;
+        padding: 0 0 2% 50%;
     }
     .headerNav {
         width: 75%;
-        margin-left: auto;
-    }
-    .headerNav li {
-        display: inline-block;
-        padding: 2% 4%;
-        text-align: center;
     }
     .heroContent {
         grid-template-columns: 100%;
-        grid-template-rows: 10% 40% 40% 10%;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas: 
             "topLeft"
             "rightContent"
             "midLeft"
             "bottomLeft";
+    }
+    #bio {
+        font-size: 14pt;
+    }
+    .mySkills {
+        top: 100px;
+        z-index: 0;
     }
     .skillDivs {
         text-align: center;
