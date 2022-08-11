@@ -35,9 +35,6 @@ h5 {
 p {
     font-size: 16pt;
 }
-ul {
-    text-align: center;
-}
 li {
     font-size: 16pt;
 }
@@ -84,7 +81,7 @@ header {
     vertical-align: top;
 }
 .logoBlock {
-    width: 10%;
+    width: 100px;
     height: 100%;
     margin: 0 auto;
 }
@@ -94,38 +91,63 @@ header {
     padding: 15px 0 20px 2%;
 }
 .titleBlock {
-    width: 24%;
+    width: 250px;
     height: 100%;
     margin: 0 auto;
 }
 .title {
     color: black;
-    width: 85%;
+    width: 100%;
 }
 .name {
     margin: 0 auto;
-    padding: 15px 0 0 5%;
+    padding: 15px 0 0 15px;
 }
 .job {
     margin: 0 auto;
-    padding: 0 0 15px 5%;
+    padding: 0 0 15px 15px;
 }
 nav {
     display: inline-block;
-    width: 63%;
     height: 100%;
-    margin:0 auto;
-    text-align:right;
+    width: auto;
+    position: absolute;
+    right: 60px;
 }
 .headerNav {
-    width: 75%;
     margin-left: auto;
+    position: absolute;
+    right: 10px;
+    white-space: nowrap;
 }
 .headerNav li {
     display: inline-block;
-    padding: 2% 4%;
-    text-align: center;
+    padding: 2%;
+    text-align: right;
 }
+.navButton {
+    background-color: #3C6543;
+    transition: all 0.5s ease;
+}
+.navButton:hover {
+    box-shadow: 0px 0px 5px #DDD819;
+}
+.navButton:active {
+    background-color:#2a442e;
+}
+.navButton a{
+    color: white;
+    transition: all 0.5s ease;
+}
+.navButton a:link, .navButton a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+} 
+.navButton a:link:active, .navButton a:visited:active {
+    text-shadow: 2px 2px 4px #373738;   
+}
+
 
 /* --------------- Hero CSS grid --------------- */
 
@@ -188,9 +210,10 @@ nav {
     padding: 5% 0 0 0;
 }
 #hi {
-    width: 90%;
+    width: 100%;
     color: #DDD819;
-    padding: 5% 1%;
+    margin: 0 auto;
+    padding: 10% 0% 5% 2%;
 }
 #bioBox {
     margin: auto;
@@ -452,6 +475,10 @@ footer li {
             "rightContent"
             "midLeft"
             "bottomLeft";
+    }
+    #hi {
+        width: 100%;
+        padding: 10% 0 0 3%;
     }
     #bio {
         font-size: 14pt;
