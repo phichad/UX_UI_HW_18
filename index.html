@@ -44,7 +44,7 @@
                         <li class="inline-block navItem"><button class="button navButton"><a href=#aboutSect>About</a></button></li>
                         <li class="inline-block navItem"><button class="button navButton"><a href=#skillSect>Skills</a></button></li>
                         <li class="inline-block navItem"><button class="button navButton"><a href=#workSect>Projects</a></button></li>
-                        <li class="inline-block navItem"><button class="button navButton"><a href="#">Contact</a></button></li>
+                        <li class="inline-block navItem"><button class="button navButton"><a href="#contactSect">Contact</a></button></li>
                     </ul>
                     <button class="button burger navButton">
                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -77,9 +77,9 @@
             </div>
         </section>
 
-<!-- My UX Skills section coded using CSS grid -->
+<!-- My Skills section coded using CSS grid -->
         <section class="mySkills" id="skillSect">
-                <h1 class="sectionHeader">My UX Skills</h1>
+                <h1 class="sectionHeader">My Skills</h1>
             <div class="grid skillDivs">
                 <div class="userResearch leftColumn topRow">
                     <div class="nestedGrid">
@@ -119,7 +119,7 @@
 
 <!-- My Work section coded using CSS flex -->
         <section class="myWork" id="workSect">
-            <h1 class="sectionHeader">My Work</h1>
+            <h1 class="sectionHeader">Projects</h1>
             <div class="flexContainer workDivs">
                 <div class="caseStudy">
                     <div class="candorImgDiv">
@@ -167,6 +167,37 @@
                         <button class="workButton"><a href="#">View Case Study</a></button>
                     </div>
                 </div>
+            </div>
+        </section>
+<!-- Contact Form -->
+        <section id="contactSect">
+            <h1 class="sectionHeader">Contact</h1>
+            <div class="container formContainer">
+                <h2>Message Me</h2>
+                <form id="contactForm" method="post" action="contact_form.php">
+                    <div class="formGroup">    
+                        <label for="name" class="formLabel"> Name* </label>
+                        <div class="inputGroup">
+                            <input type="text" id="name" name="name" class="formControl" required>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <label for="email" class="formLabel"> Email* </label>
+                        <div class="inputGroup">
+                            <input type="email" id="email" name="email" class="formControl" required>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <label for="message" class="formLabel"> Message* </label>
+                        <div class="inputGroup">
+                            <textarea id="message" name="message" class="formControl" rows="6" maxlength="3000" required></textarea>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <button type="submit" id="contactFormButton" class="formButton">Send</button>
+                    </div>
+                </form>
+                <small>*Required fields marked with asterisk</small>
             </div>
         </section>
 
