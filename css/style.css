@@ -503,7 +503,7 @@ footer li {
     .topnav .burger {
         display: block;
         position: absolute;
-        margin: 0;
+        margin: 0 auto;
         padding: 30px 15px;
         background-color: #3C6543;
     }
