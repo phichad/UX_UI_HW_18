@@ -11,7 +11,7 @@ body {
 
 /* --------------- Text styles --------------- */
 
-h1, h2, h3, button {
+h1, h2, h3, button, label {
     font-family:'Courier New', Courier, monospace;
 }
 h4, h5, p, li {
@@ -32,16 +32,14 @@ h4 {
 h5 {
     font-size: 14pt;
 }
-p {
-    font-size: 16pt;
-}
-li {
+p, li, label {
     font-size: 16pt;
 }
 button {
     font-size: 14pt;
     border-radius: 4px;
 }
+
 
 /* --------------- Header CSS inline box --------------- */
 
@@ -308,7 +306,7 @@ nav .burger {
     margin-bottom: 0;
 }
 
-/* --------------- My Work CSS flex --------------- */
+/* --------------- My Work/Projects CSS flex --------------- */
 
 .myWork {
     background-color: black;
@@ -392,6 +390,49 @@ nav .burger {
     font-weight: 800;
 }
 
+/* --------------- Contact CSS --------------- */
+#contactSect {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding-top: 100px;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.formContainer {
+    margin: 5% 15%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1% 10%;
+}
+.formLabel {
+    font-weight:bold;
+}
+.formGroup {
+    margin: 2% auto;
+}
+.formControl {
+    width: 100%;
+}
+.formButton {
+    margin: 1% 5% 0 70%;
+    padding: 1% 10%;
+    background-color: #3C6543;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.formButton:hover {
+    box-shadow: 0px 5px 5px black;
+}
+.formButton:active {
+    box-shadow: 0px 5px 5px black inset;
+}
+input, textarea {
+    font-size: 14pt;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
 
 /* --------------- Footer CSS --------------- */
 
@@ -428,9 +469,10 @@ footer li {
     text-decoration: underline;
 }
 
+
 /* --------------- Media Queries --------------- */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .titleBlock {
         position: fixed;
         left: 100px;
@@ -438,6 +480,9 @@ footer li {
     nav {
         float: right;
         clear: left;
+    }
+    .formContainer {
+        margin: 5%;
     }
 }
 
@@ -603,6 +648,9 @@ footer li {
     .workButton {
         margin: 0 auto 10% auto;
     }
+    .formButton {
+        margin: 1% 5% 0 65%;
+    }
     footer {
         top: 100px;
     }
@@ -623,6 +671,9 @@ footer li {
 @media only screen and (max-width: 450px) {
     h1 {
         font-size: 36pt;
+    }
+    .formButton {
+        margin: 1% 5% 0 60%;
     }
 }
 
