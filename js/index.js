@@ -10,3 +10,11 @@ function myFunction() {
       x.className = "topnav";
     }
   }
+
+$(document).ready(function() {
+  $(".resumeLink").click(function(e) {
+    console.log("download link was clicked");
+    e.preventDefault();
+    window.location.href = "documents/resume2022.pdf";
+  });
+});
