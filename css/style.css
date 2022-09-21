@@ -245,7 +245,8 @@ nav .burger {
 }
 .resumeButton:hover {
     color:black;
-    font-weight: 500;
+    font-size: 20pt;
+    font-weight: 800;
     padding: 2% 4%;
     box-shadow: 2.5px 5px #CD5500;
     border: 4px solid #DDD819;
@@ -300,7 +301,8 @@ nav .burger {
 .nestedGrid p {
     justify-content: space-around;
     padding: 0 10% 10% 10%;
-    text-align: justify;
+    text-align: left;
+    text-indent: 1em;
 }
 .skillTitle {
     margin-bottom: 0;
@@ -359,7 +361,8 @@ nav .burger {
     padding-bottom: 30px;
 }
 .projectDescription {
-    text-align: justify;
+    text-align: left;
+    text-indent: 1em;
     padding: 0 10%;
 }
 .workButton {
@@ -384,7 +387,7 @@ nav .burger {
     text-decoration: none;
 }
 .workButton a:hover {
-    font-weight: 500;
+    font-weight: 800;
 }
 .workButton a:active {
     font-weight: 800;
@@ -401,8 +404,7 @@ nav .burger {
     z-index: 1;
 }
 .contCont {
-    margin: 5%;
-    padding: 1% 10%;
+    padding: 0% 10% 3%;
     text-align: center;
 }
 .iconSoc {
@@ -417,7 +419,7 @@ nav .burger {
     border-radius: 10px;
     padding: 0;
     margin: 5px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
   .iconSoc:hover {
     display: inline-block;
@@ -444,6 +446,16 @@ nav .burger {
     border-radius: 10px;
     padding: 0;
     box-shadow: none;
+  }
+  .emailLink {
+    color: black;
+  }
+  .emailLink:hover {
+    color: #3C6543;
+    font-size: larger;
+  }
+  .emailLink:active {
+    color: #83263E;
   }
 
 /* --------------- Footer CSS --------------- */
