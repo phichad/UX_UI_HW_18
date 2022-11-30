@@ -1,0 +1,62 @@
+
+.container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.box {
+    margin: 0 auto;
+}
+.resumeImg {
+    margin: 1em auto;
+    border: 1px solid #CCCCCC;
+    box-shadow: 1em 1em 1em #888888;
+}
+#resumeTop {
+    margin: 1em auto;
+}
+#resumeBottom {
+    margin: 1em auto 2em;
+}
+.resumeDownload {
+    background-color: lightblue;
+    padding: 0.5em 2em;
+}
+.resumeDownload:hover {
+    box-shadow: 1em 1em 1em #888888;
+}
+.resumeDownload:active {
+    background-color: lightgreen;
+    box-shadow: none;
+}
+a {
+    font-size: 1em;
+    vertical-align: text-bottom;
+}
+.resumeDownload:hover a {
+    font-size: 1.5em;
+}
+.resumeDownload:active a {
+    font-size: 1em;
+}
+.downloadLogo {
+    height: 1.2em;
+    width: 1.2em;
+}
+.resumeDownload:hover .downloadLogo {
+    height: 1.4em;
+    width: 1.4em;
+}
+.resumeDownload:active .downloadLogo {
+    height: 1.2em;
+    width: 1.2em;
+}
+
+/* --------------- Media Queries --------------- */
+
+@media only screen and (max-width: 620px) {
+    .resumeImg{
+        width: 100%;
+    }
+}

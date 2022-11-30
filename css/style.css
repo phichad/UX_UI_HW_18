@@ -35,7 +35,7 @@ h5 {
 p, li, label {
     font-size: 16pt;
 }
-button {
+button, a {
     font-size: 14pt;
     border-radius: 4px;
 }
@@ -128,17 +128,18 @@ nav .burger {
 }
 .navButton {
     background-color: #3C6543;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 .navButton:hover {
-    box-shadow: 0px 0px 5px #DDD819;
+    box-shadow: 0px 6px 6px #0F1E11;
 }
 .navButton:active {
-    background-color:#2a442e;
+    background-color:#0F1E11;
+    box-shadow: none;
 }
 .navButton a{
     color: white;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 .navButton a:link, .navButton a:visited {
     color: white;
@@ -157,9 +158,9 @@ nav .burger {
 }
 .heroSpace {
     background-color: black;
-    width: 100%;
+    height: 95%;
+    max-width: 100%;
     padding-top: 100px;
-    height:fit-content;
     position: relative;
     left: 0px;
     z-index: 1;
@@ -171,11 +172,14 @@ nav .burger {
         "topLeft rightContent"
         "midLeft rightContent"
         "bottomLeft rightContent";
-    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    z-index: 2;
 }
 .heroBG {
     background-color: black;
     width: 100%;
+    z-index: -2;
 }
 .greenSplotch {
     position: absolute;
@@ -206,24 +210,26 @@ nav .burger {
     grid-area: rightContent;
 }
 .selfPortrait {
-    width: 100%;
+    height: 100%;
+    width: auto;
     margin: 0 auto;
-    padding: 5% 0 0 0;
+    padding: 5% 0 0 20%;
 }
 #hi {
     width: 100%;
     color: #DDD819;
     margin: 0 auto;
-    padding: 12% 0% 5% 2%;
+    padding: 4% 2%;
+    text-shadow: -1px 1px 0 black;
 }
 #bioBox {
-    margin: auto;
-    padding: 22% 5% 10% 5%;
+    margin: 0 auto;
+    padding: 15% 5% 5% 5%;
 }
 #bio {
     margin: auto;
     font-size: 24pt;
-    line-height: 2;
+    line-height: 1.75;
     color: white;
 }
 #buttonBox {
@@ -233,27 +239,51 @@ nav .burger {
 }
 .resumeButton {
     font-size: 16pt;
+    font-weight: 800;
     display: block;
     width:70%;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
     padding: 1% 2%;
-    box-shadow: 5px 10px #CD5500;
+    box-shadow: -5px 10px #CD5500;
     border: 2px solid #DDD819;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 .resumeButton:hover {
     color:black;
     font-size: 20pt;
     font-weight: 800;
     padding: 2% 4%;
-    box-shadow: 2.5px 5px #CD5500;
+    box-shadow: -2.5px 5px #CD5500;
     border: 4px solid #DDD819;
 }
 .resumeButton:active {
     background-color: #DDD819;
     border: 2px solid #CD5500;
+}
+.buttonLogo {
+    height: 24px;
+    vertical-align: text-bottom;
+}
+.resumeButton:hover .buttonLogo {
+    height: 32px;
+}
+.resumeLink {
+    color: black;
+    text-decoration: none;
+    font-size: 16pt;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+.resumeButton:hover .resumeLink {
+    color: black;
+    font-size: 20pt;
+    font-weight: 800;
+}
+.resumeButton:active .resumeLink {
+    color: black;
+    font-size: 20pt;
     font-weight: 800;
 }
 
@@ -301,11 +331,13 @@ nav .burger {
 .nestedGrid p {
     justify-content: space-around;
     padding: 0 10% 10% 10%;
-    text-align: left;
-    text-indent: 1em;
+    text-align: center;
 }
 .skillTitle {
     margin-bottom: 0;
+}
+.skillIcon {
+    font-size: 10em;
 }
 
 /* --------------- My Work/Projects CSS flex --------------- */
@@ -316,6 +348,7 @@ nav .burger {
     width: 100%;
     position: relative;
     padding-top: 100px;
+    padding-bottom: 30px;
     z-index: 1;
 }
 .flexContainer {
@@ -337,16 +370,6 @@ nav .burger {
     padding: 0 0 auto auto;
     font-weight: 500;
 }
-.candorImg1 {
-    width: 48%;
-    height: auto;
-    margin: 0 auto;
-}
-.candorImg2 {
-    width: 48%;
-    height: auto;
-    margin: 0 auto;
-}
 .epaImg {
     width: 95%;
     height: auto;
@@ -357,39 +380,56 @@ nav .burger {
     height: auto;
     margin: 0 auto;
 }
+.wrcImg1 {
+    width: 32%;
+    height: auto;
+    margin: 0 auto;
+}
+.wrcImg2 {
+    width: 32%;
+    height: auto;
+    margin: 0 auto;
+}
+.wrcImg3 {
+    width: 32%;
+    height: auto;
+    margin: 0 auto;
+}
 .workImg {
     padding-bottom: 30px;
 }
 .projectDescription {
-    text-align: left;
-    text-indent: 1em;
-    padding: 0 10%;
+    text-align: center;
+    padding: 0 12%;
 }
 .workButton {
     margin: 10% auto;
     padding: 1% 2%;
     justify-content: end;
     background-color: white;
-    border: 2px solid #DDD819;
-    transition: all 0.5s ease;
+    border: 4px solid #DDD819;
+    box-shadow: -4px 6px #AE3555;
+    transition: all 0.3s ease;
 }
 .workButton:hover {
-    border: 4px solid #DDD819;
-    box-shadow: 0px 0px 5px #DDD819;
-    padding: 2% 4%;
+    border: 6px solid #DDD819;
+    box-shadow: -4px 6px 4px #AE3555;
 }
 .workButton:active {
     background-color: #DDD819;
-    border: 2px solid black;
+    border: 4px solid #AE3555;
+    box-shadow: none;
 }
-.workButton a {
+.workLink {
     color: black;
+    font-weight: 800;
     text-decoration: none;
 }
-.workButton a:hover {
+.workButton:hover .workLink {
+    font-size: 18pt;
     font-weight: 800;
 }
-.workButton a:active {
+.workButton:active .workLink {
     font-weight: 800;
 }
 
@@ -404,8 +444,16 @@ nav .burger {
     z-index: 1;
 }
 .contCont {
-    padding: 0% 10% 3%;
+    width: 33%;
+    padding: 1%;
+    margin: 0 2% 5% 2%;
+    border: 4px solid #3C6543;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #0F1E11;
     text-align: center;
+}
+.contactBorder{
+    margin: 0 5%;
 }
 .iconSoc {
     display: inline-block;
@@ -496,6 +544,7 @@ footer li {
 
 /* --------------- Media Queries --------------- */
 
+/* --------------- tablets --------------- */
 @media only screen and (max-width: 1024px) {
     .titleBlock {
         position: fixed;
@@ -505,20 +554,81 @@ footer li {
         float: right;
         clear: left;
     }
-    .formContainer {
-        margin: 5%;
+    #bio {
+        font-size: 22pt;
+    }
+    .mySkills {
+        top: 100px;
+        z-index: 0;
+    }
+    .skillDivs {
+        text-align: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "topRow"
+            "midRow"
+            "bottomRow";
+    }
+    .topRow {
+        grid-area: topRow;
+    }
+    .midRow {
+        grid-area: midRow;
+    }
+    .bottomRow {
+        grid-area: bottomRow;
+    }
+    .skillIcon {
+        font-size: 8em;
+    }
+    .nestedGrid {
+        padding: 3% 0 0 0;
+    }
+    .nestedGrid p {
+        padding: 0 10% 5% 10%;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .caseStudy {
+        width: 100%;
+        text-align: center;
+    }
+    .myWork {
+        background-color: black;
+        position: relative;
+        top: 100px;
+        z-index: 0;
+    }
+    .contactBorder {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1%;
+    }
+    .contCont {
+        width: 100%;
+        border: none;
+        box-shadow: none;
     }
 }
 
 @media only screen and (max-width: 950px) {
     #bio {
-        font-size: 22pt;
+        font-size: 21pt;
+    }
+    #bioBox {
+        padding: 18% 5% 5% 5%;
     }
 }
 
 @media only screen and (max-width: 900px) {
     #bio {
         font-size: 20pt;
+    }
+    #bioBox {
+        padding: 22% 5% 5% 5%;
     }
 }
 
@@ -563,14 +673,30 @@ footer li {
     #bio {
         font-size: 18pt;
     }
+    #bioBox {
+        padding: 24% 5% 5% 5%;
+    }
+    .resumeButton {
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 725px) {
     #bio {
         font-size: 16pt;
     }
+    .resumeButton {
+        width: 80%;
+    }
 }
 
+@media only screen and (max-width: 700px) {
+    .resumeButton {
+        width: 85%;
+    }
+}
+
+/* --------------- phones --------------- */
 @media only screen and (max-width: 650px){
 
     h4 {
@@ -671,9 +797,6 @@ footer li {
     }
     .workButton {
         margin: 0 auto 10% auto;
-    }
-    .formButton {
-        margin: 1% 5% 0 65%;
     }
     footer {
         top: 100px;
